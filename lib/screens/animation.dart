@@ -3,13 +3,13 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:w3schools/componets/textmanger.dart';
 
+import '../componets/App_Manager/assetsmanger.dart';
+import '../componets/App_Manager/colormanger.dart';
+import '../componets/App_Manager/fontmanger.dart';
+import '../componets/App_Manager/paddingmanger.dart';
+import '../componets/App_Manager/textmanger.dart';
 
-import '../componets/assetsmanger.dart';
-import '../componets/colormanger.dart';
-import '../componets/fontmanger.dart';
-import '../componets/paddingmanger.dart';
 import 'home.dart';
 
 class AnimationScreen extends StatelessWidget {
@@ -24,38 +24,33 @@ class AnimationScreen extends StatelessWidget {
           elevation: 0,
           title: Center(
             child: DefaultTextStyle(
-              style:   TextStyle(
-                  fontSize: FontApp.size30, color: ColorManger.widget
-              ),
+              style: TextStyle(
+                  fontSize: FontApp.size30, color: ColorManger.widget),
               child: AnimatedTextKit(
                 animatedTexts: [
                   FadeAnimatedText(AppStrings.addressApp),
                 ],
                 isRepeatingAnimation: true,
                 repeatForever: true,
-
               ),
             ),
-          ) ,
+          ),
         ),
         body: AnimatedSplashScreen(
-          splash:SingleChildScrollView(
+          splash: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children:    [
+              children: [
                 Lottie.asset(AssetImageManger.animation,
-                    fit: BoxFit.cover,
-                    height: FontApp.size250),
+                    fit: BoxFit.cover, height: FontApp.size250),
                 const SizedBox(height: Padding1.padding100),
                 Padding(
                   padding: const EdgeInsets.only(
-                      right: Padding1.padding35,
+                    right: Padding1.padding35,
                   ),
                   child: DefaultTextStyle(
-                    style:   TextStyle(
-                        fontSize: FontApp.size25,
-                        color: ColorManger.widget
-                    ),
+                    style: TextStyle(
+                        fontSize: FontApp.size25, color: ColorManger.widget),
                     child: AnimatedTextKit(
                       animatedTexts: [
                         FadeAnimatedText(AppStrings.best),
@@ -70,16 +65,13 @@ class AnimationScreen extends StatelessWidget {
               ],
             ),
           ),
-          nextScreen:   const HomePage(),
+          nextScreen: const HomePage(),
           splashIconSize: Constant.size550,
           duration: Constant.duration,
           splashTransition: SplashTransition.fadeTransition,
-          pageTransitionType:PageTransitionType.rightToLeftWithFade ,
+          pageTransitionType: PageTransitionType.rightToLeftWithFade,
           backgroundColor: ColorManger.body,
           animationDuration: const Duration(seconds: 1),
-
-        )
-
-    );
+        ));
   }
 }

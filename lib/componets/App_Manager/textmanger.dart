@@ -1,6 +1,6 @@
 class AppStrings{
   static const String  email ="Email";
-  static const String  name =" Name";
+  static const String  name ="Name";
   static const String  enterName =" Please Enter Name";
   static const String  password ="Password";
   static const String  phone ="  phone";
