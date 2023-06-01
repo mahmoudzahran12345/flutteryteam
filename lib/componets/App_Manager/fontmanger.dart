@@ -25,10 +25,12 @@ abstract class FontStyles{
   );
 }
 
-class Constant{
+abstract class Constant{
   static const int m1000 = 1000;
   static const double size550 = 550;
   static const int duration = 10000;
+  static const int onBoardingNextDuration=500;
+  static const int onBoardingDotsDuration=200;
 
 
 
