@@ -9,6 +9,8 @@ import 'widgets/dot_indicator_widget.dart';
 import 'widgets/onboarding_next_button.dart';
 import 'widgets/skip_button_widget.dart';
 
+
+
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
 
