@@ -6,10 +6,13 @@ import 'package:w3schools/screens/login/login.dart';
 import 'package:w3schools/screens/onboarding/onboarding_view.dart';
 import 'package:w3schools/screens/splash/splashView.dart';
 
+
 abstract class Routes {
   static const String splash= '/';
   static const String onboarding = 'onboardingView';
-  static const String login = 'loginView';
+  static const String login= 'loginView';
+
+  
 }
 
 class AppRoutes {
