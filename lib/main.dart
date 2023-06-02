@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'componets/App_Manager/routes_manager.dart';
-
 void main()async {
  // Bloc.observer = MyBlocObserver();
  // WidgetsFlutterBinding.ensureInitialized();
