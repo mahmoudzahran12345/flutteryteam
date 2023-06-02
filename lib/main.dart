@@ -1,11 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'componets/App_Manager/routes_manager.dart';
+import 'logical/classobserve.dart';
 void main()async {
- // Bloc.observer = MyBlocObserver();
- // WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+ Bloc.observer = MyBlocObserver();
+ WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

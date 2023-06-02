@@ -28,7 +28,7 @@ class AppRoutes {
             pageAnimationType: ScaleAnimationTransition());
       case Routes.login:
         return PageAnimationTransition(
-            page: const LoginView(),
+            page:  LoginView(),
             pageAnimationType: BottomToTopTransition());
       default:
         return null;

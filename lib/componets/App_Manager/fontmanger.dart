@@ -23,6 +23,16 @@ abstract class FontStyles{
     color: Colors.black54,
     // fontWeight: FontWeight.w900
   );
+  static TextStyle hinttextStyle15=GoogleFonts.openSans(
+    fontSize: 15.sp,
+    color: Colors.grey,
+    // fontWeight: FontWeight.w900
+  );
+  static TextStyle buttonTextStyle16=GoogleFonts.openSans(
+    fontSize: 16.sp,
+    color: Colors.white,
+    fontWeight: FontWeight.w700
+  );
 }
 
 abstract class Constant{
