@@ -34,6 +34,7 @@ class _SplashViewState extends State<SplashView>  with TickerProviderStateMixin{
   }
 
   void _slidingTextAnimation() {
+    
     textanimationController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 800));
     textslidingAnimation =

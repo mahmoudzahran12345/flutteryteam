@@ -7,6 +7,7 @@ import 'package:w3schools/screens/onboarding/widgets/onboarding_content.dart';
 import '../../componets/App_Manager/routes_manager.dart';
 import 'widgets/dot_indicator_widget.dart';
 import 'widgets/onboarding_next_button.dart';
+import 'widgets/skip_button_widget.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -38,25 +39,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       body: SafeArea(
           child: Column(
         children: [
-          Padding(
-            padding: EdgeInsets.only(top: 10.h, right: 10.w),
-            child: Align(
-              alignment: Alignment.topRight,
-              child: SizedBox(
-                width: 70.w,
-                height: 30.h,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context)
-                          .pushReplacementNamed(Routes.SplashRoute);
-                    },
-                    style: ElevatedButton.styleFrom(
-                        shape: const StadiumBorder(),
-                        backgroundColor: ColorManger.chosenOne),
-                    child: const Text('Skip')),
-              ),
-            ),
-          ),
+          const SkipButtonWidget(),
           Expanded(
             child: PageView.builder(
                 controller: _pageController,
@@ -65,8 +48,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     _pageIndex = index;
                   });
                   if (_pageIndex == OnBoardingModel.dummy_data.length - 1) {
-                    Navigator.of(context)
-                        .pushReplacementNamed(Routes.SplashRoute);
+                    Navigator.of(context).pushReplacementNamed(Routes.splash);
                   }
                   // if (index == OnBoardingModel.dummy_data.length - 1) {
                   //   setState(() {
