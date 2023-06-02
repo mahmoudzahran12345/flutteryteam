@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "471512934211",
+    "project_id": "education-app-1300d",
+    "storage_bucket": "education-app-1300d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471512934211:android:cfa35ae8b42731afd2f1f6",
+        "android_client_info": {
+          "package_name": "com.example.w3schools"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471512934211-pv4p8feoinm6kqdl5e3gff8t3qf55s0e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.w3schools",
+            "certificate_hash": "e0c07915e8964ad33c7a0a81ffe1b9502f3aac85"
+          }
+        },
+        {
+          "client_id": "471512934211-5nkp3nl993s0nfc063brj385crmlq0ac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6qSx7PLZwFj76c3-pzxSOutvDUXZPPHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471512934211-5nkp3nl993s0nfc063brj385crmlq0ac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

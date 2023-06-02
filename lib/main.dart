@@ -3,9 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'componets/App_Manager/routes_manager.dart';
 
-void main() {
+void main()async {
+ // Bloc.observer = MyBlocObserver();
+ // WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp();
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

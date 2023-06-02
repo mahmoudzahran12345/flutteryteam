@@ -36,6 +36,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:Colors.white,
       body: SafeArea(
           child: Column(
         children: [
@@ -50,17 +51,6 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   if (_pageIndex == OnBoardingModel.dummy_data.length - 1) {
                     Navigator.of(context).pushReplacementNamed(Routes.splash);
                   }
-                  // if (index == OnBoardingModel.dummy_data.length - 1) {
-                  //   setState(() {
-                  //     isLastPage = true;
-                  //     print('isLastPage');
-                  //   });
-                  // }else{
-                  //   setState(() {
-                  //     isLastPage = false;
-                  //     print('Not Last Page');
-                  //   });
-                  // }
                 },
                 itemCount: OnBoardingModel.dummy_data.length,
                 physics: const BouncingScrollPhysics(),

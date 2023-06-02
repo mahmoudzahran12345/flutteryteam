@@ -1,4 +1,4 @@
-class AppStrings{
+abstract class AppStringsEn{
   static const String  email ="Email";
   static const String  name ="Name";
   static const String  enterName =" Please Enter Name";
@@ -24,10 +24,5 @@ class AppStrings{
   static String uId = "";
   static String addressApp = "W3 schools App";
   static String best = "  With best wishes for success";
-
-
-
-
-
 
 }
