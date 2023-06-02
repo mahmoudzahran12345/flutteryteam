@@ -7,7 +7,7 @@ import 'package:w3schools/screens/onboarding/onboarding_view.dart';
 import 'package:w3schools/screens/splash/splashView.dart';
 
 abstract class Routes {
-  static const String SplashRoute = '/';
+  static const String splash= '/';
   static const String onboarding = 'onboardingView';
   static const String login = 'loginView';
 }
@@ -19,7 +19,7 @@ class AppRoutes {
         return PageAnimationTransition(
             page: const OnBoardingView(),
             pageAnimationType: ScaleAnimationTransition());
-      case Routes.SplashRoute:
+      case Routes.splash:
         return PageAnimationTransition(
             page: const SplashView(),
             pageAnimationType: ScaleAnimationTransition());
