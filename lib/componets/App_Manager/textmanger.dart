@@ -25,6 +25,7 @@ abstract class AppStringsEn{
   static String addressApp = "W3 schools App";
   static String best = "  With best wishes for success";
   static String haveAccount = "Already have an account?";
+  static String hello ='Hello';
 
 }
 abstract class AppStringsAR{

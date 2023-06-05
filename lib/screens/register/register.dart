@@ -113,12 +113,13 @@ class RegisterView extends StatelessWidget {
                 Align(
                     alignment: Alignment.centerRight,
                     child: CustomButtonWidget(
+                        function: () {},
                         width: 115.w,
                         text: 'Sign Up',
                         icon: Icons.arrow_forward)),
-                        SizedBox(
+                SizedBox(
                   height: 15.h,
-                ),  
+                ),
               ],
             ),
           ),

@@ -20,23 +20,23 @@ class CustomButtonWidget extends StatelessWidget {
   final Function() function;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: 44.h,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25),
-        gradient: LinearGradient(
-          colors: [
-            ColorManger.buttonColorFirstPart,
-            ColorManger.buttonColorSecondPart
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          // stops: [0,0.2,0.5]
+    return InkWell(
+      onTap:function,
+      child: Container(
+        width: width,
+        height: 44.h,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          gradient: LinearGradient(
+            colors: [
+              ColorManger.buttonColorFirstPart,
+              ColorManger.buttonColorSecondPart
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            // stops: [0,0.2,0.5]
+          ),
         ),
-      ),
-      child: InkWell(
-        onTap:function,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
