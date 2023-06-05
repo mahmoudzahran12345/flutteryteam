@@ -1,6 +1,9 @@
 abstract class AppStringsEn{
   static const String  email ="Email";
   static const String  username ="Username";
+  static const String  hello ="hello!";
+
+
   static const String  enterName =" Please Enter Name";
   static const String  password ="Password";
   static const String  phone ="  phone";
