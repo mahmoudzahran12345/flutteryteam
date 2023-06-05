@@ -9,13 +9,15 @@ class CustomButtonWidget extends StatelessWidget {
     Key? key,
     required this.width,
     required this.text,
-    required this.icon,
+     this.icon,
+    required this.function
   }) : super(key: key);
   
 
   final double width;
   final String text;
-  final IconData icon;
+  final IconData? icon;
+  final Function() function;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,19 +35,22 @@ class CustomButtonWidget extends StatelessWidget {
           // stops: [0,0.2,0.5]
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text,
-            style: FontStyles.buttonTextStyle16,
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            width: 5.w,
-          ),
-           Icon(icon, color: Colors.white, size: 20)
-        ],
+      child: InkWell(
+        onTap:function,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: FontStyles.buttonTextStyle16,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              width: 5.w,
+            ),
+             Icon(icon, color: Colors.white, size: 20)
+          ],
+        ),
       ),
     );
   }

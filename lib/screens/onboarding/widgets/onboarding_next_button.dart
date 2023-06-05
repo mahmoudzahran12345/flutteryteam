@@ -31,7 +31,9 @@ class OnBoardingNextButtonWidget extends StatelessWidget {
         },
         style: ElevatedButton.styleFrom(
             shape: const CircleBorder(),
-            backgroundColor: ColorManger.chosenOne),
+
+
+        ),
         child: Icon(isLastPage ? Icons.arrow_back : Icons.arrow_forward),
       ),
     );

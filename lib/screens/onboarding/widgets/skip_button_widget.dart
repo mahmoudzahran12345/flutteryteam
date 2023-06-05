@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../componets/App_Manager/colormanger.dart';
 import '../../../componets/App_Manager/routes_manager.dart';
+import '../../../componets/App_Manager/textmanger.dart';
+import '../../../componets/common_widgets/custom_button_widget.dart';
 
 class SkipButtonWidget extends StatelessWidget {
   const SkipButtonWidget({super.key});
@@ -16,14 +18,9 @@ class SkipButtonWidget extends StatelessWidget {
         child: SizedBox(
           width: 70.w,
           height: 30.h,
-          child: ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushReplacementNamed(Routes.splash);
-              },
-              style: ElevatedButton.styleFrom(
-                  shape: const StadiumBorder(),
-                  backgroundColor: ColorManger.chosenOne),
-              child: const Text('Skip')),
+          child:  CustomButtonWidget(
+              width: 100.w, text: AppStringsEn.skip,icon: Icons.arrow_forward,function: (){}, )
+
         ),
       ),
     );

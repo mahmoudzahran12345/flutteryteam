@@ -21,7 +21,7 @@ class DotIndicatorWidget extends StatelessWidget {
         decoration:  BoxDecoration(
           // shape: BoxShape.circle,
           borderRadius: BorderRadius.circular(10),
-          color: isCurrentPage ? ColorManger.chosenOne : Colors.black,
+          color: isCurrentPage ? ColorManger.buttonColorFirstPart : Colors.black,
         ),
       ),
     );
