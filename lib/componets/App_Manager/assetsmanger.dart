@@ -8,5 +8,6 @@ class AssetImageManger{
   static const  String x = "$assetPath/x.png";
   static const  String aim = "$assetPath/aim.png";
 
+  static const  String dot = "$assetPath/dot.png";
 
 }
