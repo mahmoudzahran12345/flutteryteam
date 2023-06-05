@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:w3schools/componets/App_Manager/colormanger.dart';
 
 class FontApp{
   static const double size250 = 250.0;
@@ -32,6 +33,18 @@ abstract class FontStyles{
     fontSize: 16.sp,
     color: Colors.white,
     fontWeight: FontWeight.w700
+  );
+  static TextStyle welcomeTextStyle42=GoogleFonts.dancingScript(
+    fontSize: 42.sp,
+    color: ColorManger.chosenOne,
+    fontWeight: FontWeight.w700,
+    letterSpacing: 6
+  );
+  static TextStyle defaultsmallTextStyle13=GoogleFonts.openSans(
+    fontSize: 13.sp,
+    color:Colors.black,
+    // fontWeight: FontWeight.w700,
+  
   );
 }
 

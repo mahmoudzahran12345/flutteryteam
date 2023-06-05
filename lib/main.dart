@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         //! this for Navigations
-        initialRoute:  Routes.onboarding,
+        initialRoute:  Routes.register,
         onGenerateRoute: AppRoutes.routeGenerate,
         // home: const AnimationScreen(),
       ),

@@ -17,8 +17,8 @@ class CustomTextFormFieldWidget extends StatelessWidget {
   final TextEditingController controller;
   final Widget? suffixicon;
   final TextInputType keyboardtype;
-  final FormFieldSetter onsave;
-  final FormFieldValidator onvalidate;
+  final FormFieldSetter<String> onsave;
+  final FormFieldValidator<String> onvalidate;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +42,7 @@ class CustomTextFormFieldWidget extends StatelessWidget {
           validator: onvalidate,
           keyboardType: keyboardtype,
           decoration: InputDecoration(
-              hintText: 'Username',
+              hintText: hintText,
               hintStyle: FontStyles.hinttextStyle15,
               suffixIcon: suffixicon,
               enabledBorder: InputBorder.none,
