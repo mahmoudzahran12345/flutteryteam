@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:w3schools/componets/App_Manager/assetsmanger.dart';
 import 'package:w3schools/componets/App_Manager/colormanger.dart';
-import 'package:w3schools/componets/App_Manager/fontmanger.dart';
 import 'package:w3schools/componets/App_Manager/textmanger.dart';
 import 'package:w3schools/componets/common_widgets/textFormField_widget.dart';
 
@@ -38,7 +37,9 @@ class LoginView extends StatelessWidget {
                   color: ColorManger.iconLogin1,
                 ),
                 onsave: (value) {},
-                onvalidate: (value) {},
+                onvalidate: (value) {
+                  print("3");
+                },
               ),
               SizedBox(
                 height: 30.h,
@@ -52,7 +53,7 @@ class LoginView extends StatelessWidget {
                   color: ColorManger.iconLogin2,
                 ),
                 onsave: (value) {},
-                onvalidate: (value) {},
+                onvalidate: (value) {print("");},
               ),
               SizedBox(
                 height: 10.h,
