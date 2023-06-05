@@ -16,6 +16,7 @@ class RegisterView extends StatelessWidget {
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController emailController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
 
   final GlobalKey<FormFieldState> _key = GlobalKey();
   @override
@@ -41,7 +42,7 @@ class RegisterView extends StatelessWidget {
                       Text(
                         'Register and make your study easier!',
                         textAlign: TextAlign.center,
-                        style: FontStyles.welcomeTextStyle42
+                        style: FontStyles.hinttextStyle15
                             .copyWith(fontSize: 13.sp, letterSpacing: 0),
                       ),
                       SizedBox(
@@ -90,6 +91,52 @@ class RegisterView extends StatelessWidget {
                         height: 20.h,
                       ),
                       CustomTextFormFieldWidget(
+                          hintText: AppStringsEn.phone,
+                          controller: phoneController,
+                          keyboardtype: TextInputType.name,
+                          suffixicon: Icon(
+                            Icons.phone_android,
+                            color: ColorManger.chosenOne,
+                          ),
+                          onsave: (value) {
+                            emailController.text = value!;
+                          },
+                          onvalidate: (String? value) {
+                            if (value!.isEmpty &&
+                                value.length <= 2 &&
+                                !value.contains('@')) {
+                              return 'Please enter a valid email address';
+                            }
+                            return null;
+                          }),
+                      SizedBox(
+                        height: 20.h,
+                      ),
+
+                      //! Dad phone number
+                      CustomTextFormFieldWidget(
+                          hintText: AppStringsEn.phone,
+                          controller: phoneController,
+                          keyboardtype: TextInputType.name,
+                          suffixicon: Icon(
+                            Icons.phone_android,
+                            color: ColorManger.chosenOne,
+                          ),
+                          onsave: (value) {
+                            emailController.text = value!;
+                          },
+                          onvalidate: (String? value) {
+                            if (value!.isEmpty &&
+                                value.length <= 2 &&
+                                !value.contains('@')) {
+                              return 'Please enter a valid email address';
+                            }
+                            return null;
+                          }),
+                      SizedBox(
+                        height: 20.h,
+                      ),
+                      CustomTextFormFieldWidget(
                           hintText: AppStringsEn.password,
                           controller: passwordController,
                           keyboardtype: TextInputType.text,
@@ -106,23 +153,26 @@ class RegisterView extends StatelessWidget {
                             }
                             return null;
                           }),
-                      Align(
-                          alignment: Alignment.centerRight,
-                          child: TextButton(
-                              onPressed: () {
-                                Navigator.of(context)
-                                    .pushReplacementNamed(Routes.login);
-                              },
-                              child: Text(
-                                AppStringsEn.haveAccount,
-                                style: FontStyles.defaultsmallTextStyle13
-                                    .copyWith(color: ColorManger.chosenOne),
-                              ))),
+                      Padding(
+                        padding: EdgeInsets.only(right: 45.0.w),
+                        child: Align(
+                            alignment: Alignment.centerRight,
+                            child: TextButton(
+                                onPressed: () {
+                                  Navigator.of(context)
+                                      .pushReplacementNamed(Routes.login);
+                                },
+                                child: Text(
+                                  AppStringsEn.haveAccount,
+                                  style: FontStyles.defaultsmallTextStyle13
+                                      .copyWith(color: ColorManger.chosenOne),
+                                ))),
+                      ),
                       SizedBox(
                         height: 15.h,
                       ),
                       Padding(
-                        padding:  EdgeInsets.only(right: 55.0.w),
+                        padding:  EdgeInsets.only(right: 50.0.w),
                         child: Align(
                             alignment: Alignment.centerRight,
                             child: CustomButtonWidget(
@@ -143,10 +193,21 @@ class RegisterView extends StatelessWidget {
                     child: const CustomImageDecoration(
                         image: AssetImageManger.aim)),
                 Positioned(
+                    left: 80.w,
+                    top: 20.h,
+                    child: const CustomImageDecoration(
+                        image: AssetImageManger.x)),
+                Positioned(
                     right: 40.w,
                     top: 7.h,
                     child: const CustomImageDecoration(
                       image: AssetImageManger.flower,
+                    )),
+                Positioned(
+                    left: 40.w,
+                    bottom: 7.h,
+                    child: const CustomImageDecoration(
+                      image: AssetImageManger.x,
                     )),
               ],
             ),

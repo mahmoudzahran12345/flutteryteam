@@ -6,7 +6,7 @@ abstract class AppStringsEn{
 
   static const String  enterName =" Please Enter Name";
   static const String  password ="Password";
-  static const String  phone ="  phone";
+  static const String  phone ="Phone Number";
   static const String  enterPhone ="please Enter Phone";
   static const String  logIn ="LOG IN";
   static const String  sign ="Sign in for Google";
@@ -37,7 +37,7 @@ abstract class AppStringsAR{
   static const String  enterName =" ادخل اسمك";
   static const String  password ="الرقم السري";
    static String haveAccount = "ألديك حساب مسبق ؟";
-  static const String  phone ="  الهاتف";
+  static const String  phone ="رقم الهاتف";
   static const String  enterPhone ="ادخل رقم الهاتف";
   static const String  logIn ="تسجيل دخول";
   static const String  sign ="تسجيل دخول عن طريق جوجل";
