@@ -7,7 +7,7 @@ import 'package:w3schools/componets/App_Manager/textmanger.dart';
 import 'package:w3schools/componets/common_widgets/textFormField_widget.dart';
 
 import '../../componets/App_Manager/constant.dart';
-import '../../componets/App_Manager/customimage.dart';
+import '../../componets/common_widgets/customimage.dart';
 import '../../componets/common_widgets/custom_button_widget.dart';
 import '../../componets/common_widgets/customtext.dart';
 
@@ -61,7 +61,7 @@ class LoginView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                   CustomImageDecoration(image: AssetImageManger.flower,width: 18.0.w,height: 18.0.h,),
+                   CustomImageDecoration(image: AssetImageManger.aim,width: 18.0.w,height: 18.0.h,),
                   const Spacer(),
                   CustomText(color:ColorManger.textLogin2,text: AppStringsEn.forgotPass,size: 12, ),
                 ],
@@ -70,15 +70,14 @@ class LoginView extends StatelessWidget {
               SizedBox(
                 height: 30.h,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+              Align(
+                alignment: Alignment.centerRight,
+                child: CustomButtonWidget(
+                    width: 115.w, text: AppStringsEn.signUp, icon: Icons.arrow_forward,function: (){print("login");},),
+              ),
+              CustomImageDecoration(image: AssetImageManger.circle,width: 18.0.w,height: 18.0.h,),
 
-                children: [
 
-                  CustomButtonWidget(
-                      width: 115.w, text: AppStringsEn.signUp, icon: Icons.arrow_forward,function: (){print("login");},),
-                ],
-              )
             ],
           ),
         ),
