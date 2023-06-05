@@ -19,11 +19,13 @@ class RegisterView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(53.w),
+          padding: EdgeInsets.symmetric(horizontal: 45.w),
           child: SingleChildScrollView(
             child: Column(
+             
               children: [
                 // const Spacer(),
+                SizedBox(height: 50.h,),
                 Text(
                   'Hello',
                   style: FontStyles.welcomeTextStyle42,
@@ -31,7 +33,7 @@ class RegisterView extends StatelessWidget {
                 Text(
                   'Register and make your study easier!',
                   textAlign: TextAlign.center,
-                  style: FontStyles.hinttextStyle15,
+                  style: FontStyles.welcomeTextStyle42.copyWith(fontSize: 13.sp,letterSpacing: 0),
                 ),
                 SizedBox(
                   height: 35.h,
