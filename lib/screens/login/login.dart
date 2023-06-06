@@ -5,6 +5,7 @@ import 'package:w3schools/componets/App_Manager/colormanger.dart';
 import 'package:w3schools/componets/App_Manager/textmanger.dart';
 import 'package:w3schools/componets/common_widgets/textFormField_widget.dart';
 import '../../componets/App_Manager/fontmanger.dart';
+import '../../componets/App_Manager/routes_manager.dart';
 import '../../componets/common_widgets/customimage.dart';
 import '../../componets/common_widgets/custom_button_widget.dart';
 class LoginView extends StatelessWidget {
@@ -20,7 +21,7 @@ class LoginView extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            child: Container(
+            child: SizedBox(
               height: 500.h,
               child: Stack(
                 children: [
@@ -128,8 +129,8 @@ class LoginView extends StatelessWidget {
                                 )),
                             TextButton(
                                 onPressed: () {
-                                  /* Navigator.of(context)
-                                      .pushReplacementNamed(Routes.login);*/
+                                   Navigator.of(context)
+                                      .pushReplacementNamed(Routes.register);
                                 },
                                 child: Text(
                                   AppStringsEn.signUp2,

@@ -1,7 +1,7 @@
 abstract class AppStringsEn{
   static const String  email ="Email";
   static const String  username ="Username";
-  static const String  hello ="hello!";
+  static const String  hello ="Hello!";
 static const String loginMake = "Login and make your study easier!";
 
   static const String  enterName =" Please Enter Name";

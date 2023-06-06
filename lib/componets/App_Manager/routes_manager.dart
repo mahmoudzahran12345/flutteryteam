@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:page_animation_transition/animations/bottom_to_top_transition.dart';
+import 'package:page_animation_transition/animations/left_to_right_faded_transition.dart';
+import 'package:page_animation_transition/animations/right_to_left_faded_transition.dart';
 import 'package:page_animation_transition/animations/scale_animation_transition.dart';
 import 'package:page_animation_transition/page_animation_transition.dart';
 import 'package:w3schools/screens/login/login.dart';
@@ -31,11 +32,11 @@ class AppRoutes {
       case Routes.login:
         return PageAnimationTransition(
             page:  LoginView(),
-            pageAnimationType: BottomToTopTransition());
+            pageAnimationType: LeftToRightFadedTransition());
       case Routes.register:
         return PageAnimationTransition(
             page:  RegisterView(),
-            pageAnimationType: BottomToTopTransition());
+            pageAnimationType: RightToLeftFadedTransition());
       default:
         return null;
     }
