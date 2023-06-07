@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:w3schools/componets/App_Manager/colormanger.dart';
 import 'package:w3schools/models/onBoarding_model.dart';
 import 'package:w3schools/screens/onboarding/widgets/onboarding_content.dart';
 

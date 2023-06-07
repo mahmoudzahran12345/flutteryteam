@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../componets/App_Manager/colormanger.dart';
-import '../../../componets/App_Manager/routes_manager.dart';
+import 'package:w3schools/componets/App_Manager/routes_manager.dart';
 import '../../../componets/App_Manager/textmanger.dart';
 import '../../../componets/common_widgets/custom_button_widget.dart';
 
@@ -19,7 +17,9 @@ class SkipButtonWidget extends StatelessWidget {
           width: 70.w,
           height: 30.h,
           child:  CustomButtonWidget(
-              width: 100.w, text: AppStringsEn.skip,icon: Icons.arrow_forward,function: (){}, )
+              width: 100.w, text: AppStringsEn.skip,icon: Icons.arrow_forward,function: (){
+                Navigator.of(context).pushReplacementNamed(Routes.splash);
+              }, )
 
         ),
       ),
