@@ -14,7 +14,7 @@ class SkipButtonWidget extends StatelessWidget {
       child: Align(
         alignment: Alignment.topRight,
         child: SizedBox(
-          width: 70.w,
+          width: 80.w,
           height: 30.h,
           child:  CustomButtonWidget(
               width: 100.w, text: AppStringsEn.skip,icon: Icons.arrow_forward,function: (){

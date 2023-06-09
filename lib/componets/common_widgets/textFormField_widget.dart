@@ -7,15 +7,19 @@ class CustomTextFormFieldWidget extends StatelessWidget {
   const CustomTextFormFieldWidget({
     Key? key,
     required this.hintText,
+    // this.isPhoneNumber = false,
     required this.controller,
     this.suffixicon,
+    this.textInputAction = TextInputAction.next,
     required this.keyboardtype,
     required this.onsave,
     required this.onvalidate,
   }) : super(key: key);
   final String hintText;
+  // final bool isPhoneNumber;
   final TextEditingController controller;
   final Widget? suffixicon;
+  final TextInputAction textInputAction;
   final TextInputType keyboardtype;
   final FormFieldSetter<String> onsave;
   final FormFieldValidator<String> onvalidate;
@@ -38,6 +42,7 @@ class CustomTextFormFieldWidget extends StatelessWidget {
         padding: EdgeInsets.only(top: 5.h, bottom: 5.h, left: 19.w, right: 5.w),
         child: TextFormField(
           controller: controller,
+          textInputAction: textInputAction,
           onSaved: onsave,
           validator: onvalidate,
           keyboardType: keyboardtype,

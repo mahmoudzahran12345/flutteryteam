@@ -5,26 +5,30 @@ import '../App_Manager/colormanger.dart';
 import '../App_Manager/fontmanger.dart';
 
 class CustomButtonWidget extends StatelessWidget {
-  const CustomButtonWidget({
-    Key? key,
-    required this.width,
-    required this.text,
-     this.icon,
-    required this.function
-  }) : super(key: key);
-  
+  const CustomButtonWidget(
+      {Key? key,
+      required this.width,
+      this.height = 44,
+      this.iconSize = 20,
+      this.text,
+      this.icon,
+      required this.function})
+      : super(key: key);
 
   final double width;
-  final String text;
+  final double height;
+  final double iconSize;
+
+  final String? text;
   final IconData? icon;
   final Function() function;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap:function,
+      onTap: function,
       child: Container(
         width: width,
-        height: 44.h,
+        height: height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
           gradient: LinearGradient(
@@ -41,14 +45,14 @@ class CustomButtonWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              text,
+              text ?? '',
               style: FontStyles.buttonTextStyle16,
               textAlign: TextAlign.center,
             ),
             SizedBox(
               width: 5.w,
             ),
-             Icon(icon, color: Colors.white, size: 20)
+            Icon(icon, color: Colors.white, size: iconSize)
           ],
         ),
       ),
